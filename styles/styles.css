@@ -10,7 +10,7 @@ p.underconstruction {
 	text-shadow: 0px 0px 15px red,
 	             0px 0px 15px red;
 }
-p.bunda-free {
+#bunda-free {
   /* The base font size is now 10 pixels high */
   font-size: 40px;
 }
