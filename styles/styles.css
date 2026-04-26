@@ -1,10 +1,10 @@
 html {
   background-image: url("battle-background-deltarune.gif");
   background-size: 400px;
-  background-repeat: repeat;
+  background-repeat: repeat; 
 }
 p.underconstruction {
-	font-size: 30px;
+	font-size: clamp(20px, 6vw, 30px);
 	color: red;
 	text-align: center;
 	text-shadow: 0px 0px 15px red,
@@ -16,16 +16,17 @@ p.underconstruction {
 }
 h1 {
   text-align: center;
-  font-size: 60px;
+  font-size: clamp(40px, 20vw, 60px);
   padding-top: 0px;
   margin-top: 10px;
   text-shadow: 3px 3px 10px #f34ac0,
                0px 0px 15px #f34ac0;
   font-family: "DeltaruneFont";
+
 }
 h2 {
   text-align: center;
-  font-size: 100px;
+  font-size: clamp(40px, 15vw, 100px);
   line-height: 0;
   text-shadow: 3px 3px 20px yellow;
   letter-spacing: 5px;
@@ -51,23 +52,33 @@ img {
   position: relative;
   margin: 66px auto;
    max-width: 1000px;
-   
-
 }
 
 .fundoDelta {
   min-height: 200px;
-  background: black;
-  padding: 46px;
+  background: pink;
+  padding: clamp(16px, 4vw, 46px);
   margin: 13px;
 }
 .bordaDelta::before {
   position: absolute;
   content: "";
-  inset: -53px -41px -50px -41px;
+  inset: -54px -41px -50px -41px;
   
   border: 100px solid transparent;
   border-image: url("deltarune-hud.png") 104 stretch;
   
   pointer-events: none;
+}
+@media (max-width: 768px) {
+    body {
+    max-width: 80%;
+    padding: 10px;
+    margin: 0 auto;
+    }
+    img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;  
+  }
 }
